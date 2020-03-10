@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_cWi6sGLQEeq8IKBKq8xZJw" name="projett">
+  <eAnnotations xmi:id="_cWi6sWLQEeq8IKBKq8xZJw" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_cWi6smLQEeq8IKBKq8xZJw" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_cWjhwGLQEeq8IKBKq8xZJw" value="3.0.0"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_cWjhwWLQEeq8IKBKq8xZJw" name="User"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cWjhwmLQEeq8IKBKq8xZJw" memberEnd="_cWjhw2LQEeq8IKBKq8xZJw _cWjhxWLQEeq8IKBKq8xZJw" navigableOwnedEnd="_cWjhw2LQEeq8IKBKq8xZJw">
+    <ownedEnd xmi:id="_cWjhw2LQEeq8IKBKq8xZJw" visibility="public" type="_cWjhx2LQEeq8IKBKq8xZJw" association="_cWjhwmLQEeq8IKBKq8xZJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWjhxGLQEeq8IKBKq8xZJw"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_cWjhxWLQEeq8IKBKq8xZJw" visibility="public" type="_cWjhwWLQEeq8IKBKq8xZJw" association="_cWjhwmLQEeq8IKBKq8xZJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWjhxmLQEeq8IKBKq8xZJw"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_cWjhx2LQEeq8IKBKq8xZJw" name="Client">
+    <ownedComment xmi:id="_cWjhyGLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWjhyWLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWjhymLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWjhy2LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWjhzGLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWjhzWLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cWjhzmLQEeq8IKBKq8xZJw" memberEnd="_cWjhz2LQEeq8IKBKq8xZJw _cWjh0WLQEeq8IKBKq8xZJw" navigableOwnedEnd="_cWjhz2LQEeq8IKBKq8xZJw">
+    <ownedEnd xmi:id="_cWjhz2LQEeq8IKBKq8xZJw" visibility="public" type="_cWjh2GLQEeq8IKBKq8xZJw" association="_cWjhzmLQEeq8IKBKq8xZJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWjh0GLQEeq8IKBKq8xZJw"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_cWjh0WLQEeq8IKBKq8xZJw" visibility="public" type="_cWjhx2LQEeq8IKBKq8xZJw" association="_cWjhzmLQEeq8IKBKq8xZJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWjh0mLQEeq8IKBKq8xZJw"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cWjh02LQEeq8IKBKq8xZJw" memberEnd="_cWjh1GLQEeq8IKBKq8xZJw _cWjh1mLQEeq8IKBKq8xZJw" navigableOwnedEnd="_cWjh1GLQEeq8IKBKq8xZJw">
+    <ownedEnd xmi:id="_cWjh1GLQEeq8IKBKq8xZJw" visibility="public" type="_cWjh5GLQEeq8IKBKq8xZJw" association="_cWjh02LQEeq8IKBKq8xZJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWjh1WLQEeq8IKBKq8xZJw"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_cWjh1mLQEeq8IKBKq8xZJw" visibility="public" type="_cWjhx2LQEeq8IKBKq8xZJw" association="_cWjh02LQEeq8IKBKq8xZJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWjh12LQEeq8IKBKq8xZJw"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_cWjh2GLQEeq8IKBKq8xZJw" name="Crée le serveur">
+    <ownedComment xmi:id="_cWjh2WLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWjh2mLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWjh22LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWjh3GLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWjh3WLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWjh3mLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cWjh32LQEeq8IKBKq8xZJw" memberEnd="_cWjh4GLQEeq8IKBKq8xZJw _cWjh4mLQEeq8IKBKq8xZJw" navigableOwnedEnd="_cWjh4GLQEeq8IKBKq8xZJw">
+    <ownedEnd xmi:id="_cWjh4GLQEeq8IKBKq8xZJw" visibility="public" type="_cWkI72LQEeq8IKBKq8xZJw" association="_cWjh32LQEeq8IKBKq8xZJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWjh4WLQEeq8IKBKq8xZJw"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_cWjh4mLQEeq8IKBKq8xZJw" visibility="public" type="_cWjh2GLQEeq8IKBKq8xZJw" association="_cWjh32LQEeq8IKBKq8xZJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWjh42LQEeq8IKBKq8xZJw"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_cWjh5GLQEeq8IKBKq8xZJw" name="Crée un personnage">
+    <ownedComment xmi:id="_cWjh5WLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWjh5mLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWjh52LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWjh6GLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWjh6WLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI0GLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_cWkI0WLQEeq8IKBKq8xZJw" name="Sauvergarder un personnage">
+    <ownedComment xmi:id="_cWkI0mLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI02LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI1GLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI1WLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI1mLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI12LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <extend xmi:id="_cWkI2GLQEeq8IKBKq8xZJw" name="UseCaseDependency" extendedCase="_cWjh2GLQEeq8IKBKq8xZJw"/>
+    <extend xmi:id="_cWkI2WLQEeq8IKBKq8xZJw" name="UseCaseDependency" extendedCase="_cWjh5GLQEeq8IKBKq8xZJw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_cWkI2mLQEeq8IKBKq8xZJw" name="Observation autour du personnage">
+    <ownedComment xmi:id="_cWkI22LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI3GLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI3WLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI3mLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI32LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI4GLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_cWkI4WLQEeq8IKBKq8xZJw" name="L'état du personnage">
+    <ownedComment xmi:id="_cWkI4mLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI42LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI5GLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI5WLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI5mLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI52LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_cWkI6GLQEeq8IKBKq8xZJw" name="Choisir une action">
+    <ownedComment xmi:id="_cWkI6WLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI6mLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI62LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI7GLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI7WLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI7mLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_cWkI72LQEeq8IKBKq8xZJw" name="Crée une partie">
+    <ownedComment xmi:id="_cWkI8GLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI8WLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI8mLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI82LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI9GLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkI9WLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cWkI9mLQEeq8IKBKq8xZJw" memberEnd="_cWkI92LQEeq8IKBKq8xZJw _cWkI-WLQEeq8IKBKq8xZJw" navigableOwnedEnd="_cWkI92LQEeq8IKBKq8xZJw">
+    <ownedEnd xmi:id="_cWkI92LQEeq8IKBKq8xZJw" visibility="public" type="_cWkI2mLQEeq8IKBKq8xZJw" association="_cWkI9mLQEeq8IKBKq8xZJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWkI-GLQEeq8IKBKq8xZJw"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_cWkI-WLQEeq8IKBKq8xZJw" visibility="public" type="_cWkI72LQEeq8IKBKq8xZJw" association="_cWkI9mLQEeq8IKBKq8xZJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWkI-mLQEeq8IKBKq8xZJw"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cWkI-2LQEeq8IKBKq8xZJw" memberEnd="_cWkI_GLQEeq8IKBKq8xZJw _cWkI_mLQEeq8IKBKq8xZJw" navigableOwnedEnd="_cWkI_GLQEeq8IKBKq8xZJw">
+    <ownedEnd xmi:id="_cWkI_GLQEeq8IKBKq8xZJw" visibility="public" type="_cWkJGmLQEeq8IKBKq8xZJw" association="_cWkI-2LQEeq8IKBKq8xZJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWkI_WLQEeq8IKBKq8xZJw"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_cWkI_mLQEeq8IKBKq8xZJw" visibility="public" type="_cWkI72LQEeq8IKBKq8xZJw" association="_cWkI-2LQEeq8IKBKq8xZJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWkI_2LQEeq8IKBKq8xZJw"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_cWkJAGLQEeq8IKBKq8xZJw" name="Gérer l'inventaire">
+    <ownedComment xmi:id="_cWkJAWLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJAmLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJA2LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJBGLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJBWLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJBmLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_cWkJB2LQEeq8IKBKq8xZJw" name="envoyer un message">
+    <ownedComment xmi:id="_cWkJCGLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJCWLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJCmLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJC2LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJDGLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJDWLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cWkJDmLQEeq8IKBKq8xZJw" memberEnd="_cWkJD2LQEeq8IKBKq8xZJw _cWkJEWLQEeq8IKBKq8xZJw" navigableOwnedEnd="_cWkJD2LQEeq8IKBKq8xZJw">
+    <ownedEnd xmi:id="_cWkJD2LQEeq8IKBKq8xZJw" visibility="public" type="_cWjhx2LQEeq8IKBKq8xZJw" association="_cWkJDmLQEeq8IKBKq8xZJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWkJEGLQEeq8IKBKq8xZJw"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_cWkJEWLQEeq8IKBKq8xZJw" visibility="public" type="_cWkJB2LQEeq8IKBKq8xZJw" association="_cWkJDmLQEeq8IKBKq8xZJw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cWkJEmLQEeq8IKBKq8xZJw"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_cWkJE2LQEeq8IKBKq8xZJw" name="PNJ automatique">
+    <ownedComment xmi:id="_cWkJFGLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJFWLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJFmLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJF2LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJGGLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJGWLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_cWkJGmLQEeq8IKBKq8xZJw" name="Apparition de monstre automatique">
+    <ownedComment xmi:id="_cWkJG2LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJHGLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJHWLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJHmLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJH2LQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+    <ownedComment xmi:id="_cWkJIGLQEeq8IKBKq8xZJw">
+      <body>...</body>
+    </ownedComment>
+  </packagedElement>
+</uml:Model>
