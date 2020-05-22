@@ -1,0 +1,9 @@
+{
+    "type" : 2,
+    "name" : "Skeleton",
+    "health" : 10,
+    "mana" : 0,
+    "maxHealth" : 10,
+    "maxMana" : 0,
+    "damage" : 5
+}
