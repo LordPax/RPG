@@ -5,15 +5,9 @@ import java.util.List;
 
 public class Server {
     private Map map;
-    // private ArrayList<Entity> player;
-    // private ArrayList<Entity> mob;
-    // private ArrayList<Entity> pnj;
 
     public Server() {
         this.map = new Map(5, 5);
-        // this.player = new ArrayList<Entity>();
-        // this.mob = new ArrayList<Entity>();
-        // this.pnj = new ArrayList<Entity>();
     }
 
     public Server(String addr, int port) {}

@@ -6,13 +6,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Game implements View{
-	public Game() {}
+    public Game() {}
 
-	public JPanel buildView() {
-		JPanel pan = new JPanel();
- 
-		pan.add(new JLabel("test game"));
- 
-		return pan;
-	}
+    public JPanel buildView() {
+        JPanel pan = new JPanel();
+
+        pan.add(new JLabel("test game"));
+
+        return pan;
+    }
 }
