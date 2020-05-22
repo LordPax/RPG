@@ -1,3 +1,5 @@
+package src;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -5,11 +7,16 @@ public class Map {
     private Case[] matrice;
     private int w;
     private int h;
+    private ArrayList<Entity> player;
+    private ArrayList<Entity> mob;
+    private ArrayList<Entity> pnj;
 
-    public Map() {
-    }
+    public Map() {}
 
     public Map(int w, int h) {
+        this.player = new ArrayList<Entity>();
+        this.mob = new ArrayList<Entity>();
+        this.pnj = new ArrayList<Entity>();
         this.w = w;
         this.h = h;
         this.initMap();

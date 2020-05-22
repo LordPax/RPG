@@ -1,3 +1,5 @@
+package src;
+
 public class Case {
     private int typeEntity;
     private int idEntity;
