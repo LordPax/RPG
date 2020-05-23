@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Client {
     private Map map;
-    private Window win;
+    private RPGWindow win;
 
     public Client(String title) {
         this.map = new Map(5, 5);
-        this.win = new Window(title);
+        this.win = new RPGWindow(title);
     }
 
     public Client(String title, String addr, int port) {}

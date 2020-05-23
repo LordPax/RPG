@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface View {
     public JPanel buildView();
+    public RPGWindow getWindow();
 }

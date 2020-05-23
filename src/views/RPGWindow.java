@@ -6,18 +6,19 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Window extends JFrame {
+public class RPGWindow extends JFrame {
     private ArrayList<View> view;
+    private JPanel v;
 
-    public Window(String title) {
+    public RPGWindow(String title) {
         super(title);
         this.view = new ArrayList<View>();
 
-        this.addView(new Menu());
-        this.addView(new Game());
+        this.addView(new Menu(this));
+        this.addView(new Game(this));
 
-        this.initComponent();
-        this.centrer(0.5);
+        this.initComponent(0);
+        this.centrer(0.6);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
     }
@@ -32,13 +33,25 @@ public class Window extends JFrame {
         this.setBounds((dim.width - largeur) / 2, (dim.height - longueur) / 2, largeur, longueur);
     }
 
-    private void initComponent() {
+    public void initComponent(int i) {
         JPanel pan = new JPanel();
-        JPanel v = getView(0).buildView();
- 
+        this.v = getView(i).buildView();
+
         this.add(pan);
  
-        pan.add(v);
+        pan.add(this.v);
+    }
+
+    public void changeView(int i) {
+        JPanel pan = new JPanel();
+        this.v = getView(i).buildView();
+
+        this.removeAll(); 
+        this.add(pan);
+        this.v.repaint();
+        
+        pan.add(this.v);
+
     }
 
     public void addView(View v) {

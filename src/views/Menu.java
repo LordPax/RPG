@@ -1,5 +1,6 @@
 package src.views;
 
+import src.*;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
@@ -9,8 +10,20 @@ import java.util.List;
 public class Menu implements View {
     private JButton single;
     private JButton local;
+    private RPGWindow win;
 
-    public Menu() {}
+    public Menu(RPGWindow win) {
+        this.win = win;
+    }
+
+    public RPGWindow getWindow() {
+        return this.win;
+    }
+
+    private void initListener() {
+        this.single.addActionListener(new ListenerMenu(1, this));
+        this.local.addActionListener(new ListenerMenu(2, this));
+    }
 
     public JPanel buildView() {
         JPanel pan = new JPanel();
@@ -18,6 +31,8 @@ public class Menu implements View {
 
         pan.add(this.buildTitle(), BorderLayout.NORTH);
         pan.add(this.buildContent(), BorderLayout.CENTER);
+
+        this.initListener();
 
         return pan;
     }

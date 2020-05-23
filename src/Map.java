@@ -26,9 +26,8 @@ public class Map {
         int size = this.w * this.h;
         this.matrice = new Case[size];
 
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++)
             this.matrice[i] = new Case();
-        }
     }
 
     public Case getCase(int x, int y) {
@@ -44,9 +43,9 @@ public class Map {
         String aff = "";
 
         for (int i = 0; i < this.h; i++) {
-            for (int j = 0; j < this.w; j++) {
+            for (int j = 0; j < this.w; j++)
                 aff += this.getCase(j, i).getTest();
-            }
+            
             System.out.println(aff);
             aff = "";
         }
