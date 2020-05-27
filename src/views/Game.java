@@ -6,7 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Game implements View{
-    public Game() {}
+    private RPGWindow win;
+
+    public Game(RPGWindow win) {
+        this.win = win;
+    }
+
+    public RPGWindow getWindow() {
+        return this.win;
+    }
 
     public JPanel buildView() {
         JPanel pan = new JPanel();
