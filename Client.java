@@ -8,8 +8,8 @@ public class Client {
     private RPGWindow win;
 
     public Client(String title) {
-        this.map = new Map(5, 5);
-        this.win = new RPGWindow(title);
+        this.map = new Map(10, 10);
+        this.win = new RPGWindow(title, map);
     }
 
     public Client(String title, String addr, int port) {}
@@ -33,8 +33,18 @@ public class Client {
         System.out.println(item.toString());
     }
 
+    public Map getMap() {
+        return this.map;
+    }
+
+    public RPGWindow getWindow() {
+        return this.win;
+    }
+
     public static void main(String[] args){
-        Client s = new Client("RPG Client Alpha");
-        s.test();
+        Client c = new Client("RPG Client Alpha");
+        // c.getWindow().addView(new Menu(c.getWindow(), c.getMap()));
+        // c.getWindow().addView(new Game(c.getWindow(), c.getMap()));
+        c.test();
     }
 }

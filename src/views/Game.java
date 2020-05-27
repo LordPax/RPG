@@ -1,15 +1,27 @@
 package src.views;
 
+import src.*;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Game implements View{
+public class Game extends JPanel implements View{
     private RPGWindow win;
+    private Map map;
 
-    public Game(RPGWindow win) {
+    public Game(RPGWindow win, Map map) {
+        super();
         this.win = win;
+        this.map = map;
+    }
+
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.setColor(Color.RED);
+        g.drawLine(100, 100, 50, 50);
+        g.drawLine(50, 50, 30, 60);
     }
 
     public RPGWindow getWindow() {
@@ -17,10 +29,10 @@ public class Game implements View{
     }
 
     public JPanel buildView() {
-        JPanel pan = new JPanel();
+        return this;
+    }
 
-        pan.add(new JLabel("test game"));
-
-        return pan;
+    public void updateView() {
+        this.repaint();
     }
 }

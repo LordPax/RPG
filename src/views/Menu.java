@@ -11,9 +11,11 @@ public class Menu implements View {
     private JButton single;
     private JButton local;
     private RPGWindow win;
+    private Map map;
 
-    public Menu(RPGWindow win) {
+    public Menu(RPGWindow win, Map map) {
         this.win = win;
+        this.map = map;
     }
 
     public RPGWindow getWindow() {
@@ -56,5 +58,9 @@ public class Menu implements View {
         pan.add(this.local);
 
         return pan;
+    }
+
+    public void updateView() {
+        
     }
 }

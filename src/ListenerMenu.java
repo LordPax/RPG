@@ -21,7 +21,7 @@ public class ListenerMenu implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (button == 1) {
             System.out.println("single");
-            this.win.changeView(1);
+            this.win.initComponent(1);
         }
         else
             System.out.println("local");
