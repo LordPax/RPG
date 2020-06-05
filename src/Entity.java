@@ -19,6 +19,7 @@ public class Entity{
     private int damage;
     private int type;
     private int id;
+    private String symbol;
     private Inventory inventory;
 
     public Entity() {
@@ -46,6 +47,7 @@ public class Entity{
         this.maxMana = maxMana;
         this.maxHealth = maxHealth;
         this.damage = damage;
+        this.symbol = "";
         this.inventory = new Inventory();
     }
 
@@ -53,15 +55,16 @@ public class Entity{
         JSONObject o = this.readJSON(file);
 
         this.type = o.getInt("type");
-        this.id = 0;
+        this.id = id;
         this.name = o.getString("name");
-        this.x = 0;
-        this.y = 0;
+        this.x = x;
+        this.y = y;
         this.mana = o.getInt("mana");
         this.health = o.getInt("health");
         this.maxMana = o.getInt("maxMana");
         this.maxHealth = o.getInt("maxHealth");
         this.damage = o.getInt("damage");
+        this.symbol = o.getString("symbol");
         this.inventory = new Inventory();
 
         // this(o.getInt("type"), id, o.getString("name"), x, y, o.getInt("mana"), o.getInt("health"), o.getInt("maxMana"), o.getInt("maxHealth"), o.getInt("damage"));
@@ -128,6 +131,10 @@ public class Entity{
 
     public int getDamage() {
         return this.damage;
+    }
+
+    public String getSymbol() {
+        return this.symbol;
     }
 
     public Inventory getInventory() {

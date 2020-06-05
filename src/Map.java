@@ -12,28 +12,47 @@ public class Map {
     private Case[] matrice;
     private int w;
     private int h;
+    private int lastId;
+    private int playerId;
     private ArrayList<Entity> player;
     private ArrayList<Entity> mob;
-    private ArrayList<Entity> pnj;
+    // private ArrayList<Entity> pnj;
 
     public Map() {}
 
     public Map(int w, int h) {
         this.player = new ArrayList<Entity>();
         this.mob = new ArrayList<Entity>();
-        this.pnj = new ArrayList<Entity>();
+        // this.pnj = new ArrayList<Entity>();
         this.w = w;
         this.h = h;
+        this.lastId = 0;
+        this.playerId = 0;
         this.initMap();
     }
 
     public Map(String file) {
         this.player = new ArrayList<Entity>();
         this.mob = new ArrayList<Entity>();
-        this.pnj = new ArrayList<Entity>();
+        // this.pnj = new ArrayList<Entity>();
         this.w = w;
         this.h = h;
         this.initMap();
+    }
+
+    public int getWidth() {
+        return this.w;
+    }
+    public int getHeight() {
+        return this.h;
+    }
+
+    public Entity getPlayer(int i) {
+        return this.player.get(i);
+    }
+
+    public Entity getMob(int i) {
+        return this.mob.get(i);
     }
 
     public void initMap() {
@@ -47,6 +66,28 @@ public class Map {
     public Case getCase(int x, int y) {
         int indice = y * this.w + x;
         return this.matrice[indice];
+    }
+
+    public void setCase(int x, int y, String name) {
+        int indice = y * this.w + x;
+
+        Entity entity = new Entity(name, this.lastId, x, y);
+        this.lastId++;
+
+        this.matrice[indice].setTypeEntity(entity.getType());
+        this.matrice[indice].setIdEntity(entity.getId());
+
+        if(entity.getType() == 1)
+            this.player.add(entity);
+        else
+            this.mob.add(entity);
+    }
+
+    public void setCase(int x, int y, int ground, int build) {
+        int indice = y * this.w + x;
+
+        this.matrice[indice].setGround(ground);
+        this.matrice[indice].setBuild(build);        
     }
 
     public Case[] getMatrice() {
@@ -86,16 +127,4 @@ public class Map {
             System.err.println(e);
         }
     }
-
-    // public void afficheMap() {
-    //     String aff = "";
-
-    //     for (int i = 0; i < this.h; i++) {
-    //         for (int j = 0; j < this.w; j++)
-    //             aff += this.getCase(j, i).getTest();
-            
-    //         System.out.println(aff);
-    //         aff = "";
-    //     }
-    // }
 }

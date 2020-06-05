@@ -11,7 +11,7 @@ public class Client extends JPanel{
 
     public Client() {
         super();
-        this.map = new Map(10, 10);
+        this.map = new Map(20, 20);
         this.win = new TextWindow(this.map);
         this.addKeyListener(new ListenerKeyBoard());
     }
@@ -21,7 +21,9 @@ public class Client extends JPanel{
     public void connect(String addr, int port) {}
 
     public void showWindow() {
-        System.out.println("putin de test \033[31m azeazeaze");
+        this.win.titre();
+        this.win.showMap();
+        this.win.choice();
     }
 
     public void test() {
@@ -39,11 +41,39 @@ public class Client extends JPanel{
         System.out.println("\n================ test item =================\n");
         Item item = new Item("Sword");
         System.out.println(item.toString());
+
+        System.out.println("\n================ test TextWindow =================\n");
+
+        // this.map.setCase(0, 0, "Skeleton");
+        // this.map.setCase(0, 5, "Skeleton");
+        // this.map.setCase(3, 0, "Skeleton");
+        // this.map.setCase(2, 3, "Skeleton");
+
+        // this.map.setCase(10, 10, "Player");
+
+        System.out.println(this.map.getPlayer(0));
+        System.out.println("\n--------------------------\n");
+        System.out.println(this.map.getMob(0));
+        // System.out.println("\n--------------------------\n");
+        // System.out.println(this.map.getMob(1));
+        // System.out.println("\n--------------------------\n");
+        // System.out.println(this.map.getMob(2));
+        // System.out.println("\n--------------------------\n");
+        // System.out.println(this.map.getMob(3));
+    }
+
+    public void test1() {
+        this.map.setCase(0, 0, "Skeleton");
+        this.map.setCase(0, 5, "Skeleton");
+        this.map.setCase(3, 0, "Skeleton");
+        this.map.setCase(2, 3, "Skeleton");
+
+        this.map.setCase(10, 10, "Player");
     }
 
     public static void main(String[] args){
         Client c = new Client();
+        c.test1();
         c.showWindow();
-        // s.test();
     }
 }
