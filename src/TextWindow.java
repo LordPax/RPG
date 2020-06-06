@@ -20,15 +20,26 @@ public class TextWindow {
 
         while(ok) {
             System.out.print("RPG : Quel est votre choie > ");
-            str = sc.nextLine();
+            // sc.useDelimiter(" ");
+            //str = sc.nextLine();
 
-            switch(str) {
+            switch(sc.next()) {
                 case "help" :
                     this.help();
                     break;
                 case "quit" :
                     System.out.println("RPG : Fermeture");
                     ok = false;
+                    break;
+                case "move" :
+                    try {
+                        int x = sc.nextInt(), y = sc.nextInt();
+                        this.map.moveEntity(1, 0, x, y);
+                        this.showMap();
+                    } catch(InputMismatchException e) {
+                        System.out.println("RPG error : " + e);
+                    }
+                    
                     break;
                 default :
                     System.out.println("RPG : Votre requete n'a pas été comprise");
@@ -41,6 +52,7 @@ public class TextWindow {
         System.out.println("\n=============== Help ================");
         System.out.println("help ................. Affiche l'aide");
         System.out.println("quit ................... Ferme le jeu");
+        System.out.println("move <x> <y> ...... Déplace le joueur");
         System.out.println("=====================================\n");
     }
 
@@ -76,10 +88,10 @@ public class TextWindow {
 
         switch(c.getTypeEntity()) {
             case 1 :
-                entity = "\033[34m◉ ";
+                entity = "\033[34m" + this.map.getPlayer().getSymbol() + " ";
                 break;
             case 2 :
-                entity = "\033[31m▲ ";
+                entity = "\033[31m" + this.map.getMob(c.getIdEntity()).getSymbol() + " ";
                 break;
             default :
                 entity = "  ";

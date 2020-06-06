@@ -70,6 +70,11 @@ public class Entity{
         // this(o.getInt("type"), id, o.getString("name"), x, y, o.getInt("mana"), o.getInt("health"), o.getInt("maxMana"), o.getInt("maxHealth"), o.getInt("damage"));
     }
 
+    public void move(int x, int y) {
+        this.x += x;
+        this.y += y;
+    }
+
     public JSONObject readJSON(String file) {
         String path = "./Entity/" + file + ".json";
         String content = this.charge(path);

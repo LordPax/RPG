@@ -23,6 +23,7 @@ public class Client extends JPanel{
     public void showWindow() {
         this.win.titre();
         this.win.showMap();
+        // this.autreTest();
         this.win.choice();
     }
 
@@ -51,9 +52,11 @@ public class Client extends JPanel{
 
         // this.map.setCase(10, 10, "Player");
 
-        System.out.println(this.map.getPlayer(0));
+        System.out.println(this.map.getPlayer());
         System.out.println("\n--------------------------\n");
         System.out.println(this.map.getMob(0));
+
+        this.map.moveEntity(1, 0, 5, 2);
         // System.out.println("\n--------------------------\n");
         // System.out.println(this.map.getMob(1));
         // System.out.println("\n--------------------------\n");
@@ -63,6 +66,50 @@ public class Client extends JPanel{
     }
 
     public void test1() {
+        // System.out.println("\n================ test TextWindow =================\n");
+
+        // this.map.setCase(0, 0, "Skeleton");
+        // this.map.setCase(0, 5, "Skeleton");
+        // this.map.setCase(3, 0, "Skeleton");
+        // this.map.setCase(2, 3, "Skeleton");
+
+        // this.map.setCase(10, 10, "Player");
+
+        // System.out.println(this.map.getPlayer());
+        // System.out.println("\n--------------------------\n");
+        // System.out.println(this.map.getMob(0));
+
+        // this.map.moveEntity(1, 0, 5, 2);
+
+        // System.out.println("move");
+        // System.out.println("\n--------------------------\n");
+        // System.out.println(this.map.getMob());
+        // System.out.println("\n--------------------------\n");
+        // System.out.println(this.map.getMob(2));
+        // System.out.println("\n--------------------------\n");
+        // System.out.println(this.map.getMob(3));
+    }
+
+    public void autreTest() {
+        System.out.println(this.map.getPlayer());
+        System.out.println("\n--------------------------\n");
+        System.out.println(this.map.getMob(1));
+        System.out.println(this.map.getCase(0, 5).getTypeEntity());
+        System.out.println(this.map.getCase(5, 7).getTypeEntity());
+
+        this.map.moveEntity(2, 1, 5, 2);
+        System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-\n");
+
+        System.out.println(this.map.getPlayer());
+        System.out.println("\n--------------------------\n");
+        System.out.println(this.map.getMob(1));
+        System.out.println(this.map.getCase(0, 5).getTypeEntity());
+        System.out.println(this.map.getCase(5, 7).getTypeEntity());
+
+        this.win.showMap();
+    }
+
+    public void initEntity() {
         this.map.setCase(0, 0, "Skeleton");
         this.map.setCase(0, 5, "Skeleton");
         this.map.setCase(3, 0, "Skeleton");
@@ -73,7 +120,7 @@ public class Client extends JPanel{
 
     public static void main(String[] args){
         Client c = new Client();
-        c.test1();
+        c.initEntity();
         c.showWindow();
     }
 }

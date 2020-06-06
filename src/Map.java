@@ -14,14 +14,16 @@ public class Map {
     private int h;
     private int lastId;
     private int playerId;
-    private ArrayList<Entity> player;
+    // private ArrayList<Entity> player;
+    private Entity player;
     private ArrayList<Entity> mob;
     // private ArrayList<Entity> pnj;
 
     public Map() {}
 
     public Map(int w, int h) {
-        this.player = new ArrayList<Entity>();
+        // this.player = new ArrayList<Entity>();
+        this.player = new Entity();
         this.mob = new ArrayList<Entity>();
         // this.pnj = new ArrayList<Entity>();
         this.w = w;
@@ -32,7 +34,7 @@ public class Map {
     }
 
     public Map(String file) {
-        this.player = new ArrayList<Entity>();
+        this.player = new Entity();
         this.mob = new ArrayList<Entity>();
         // this.pnj = new ArrayList<Entity>();
         this.w = w;
@@ -47,12 +49,33 @@ public class Map {
         return this.h;
     }
 
-    public Entity getPlayer(int i) {
-        return this.player.get(i);
+    public Entity getPlayer() {
+        return this.player;
     }
 
     public Entity getMob(int i) {
         return this.mob.get(i);
+    }
+
+    public void moveEntity(int type, int id, int dx, int dy) {
+        Entity entity = new Entity();
+
+        if (type == 1)
+            entity = this.getPlayer();
+        else if (type == 2)
+            entity = this.getMob(id);
+        else
+            System.out.println("RPG : Pas d'entité correspondant au type, id");
+
+        int x = entity.getX(), y = entity.getY();
+        entity.move(dx, dy);
+
+        this.getCase(x, y).setTypeEntity(0);
+        this.getCase(x, y).setIdEntity(0);
+
+        this.getCase(x + dx, y + dy).setTypeEntity(entity.getType());
+        this.getCase(x + dx, y + dy).setIdEntity(entity.getId());
+
     }
 
     public void initMap() {
@@ -69,25 +92,22 @@ public class Map {
     }
 
     public void setCase(int x, int y, String name) {
-        int indice = y * this.w + x;
-
         Entity entity = new Entity(name, this.lastId, x, y);
-        this.lastId++;
 
-        this.matrice[indice].setTypeEntity(entity.getType());
-        this.matrice[indice].setIdEntity(entity.getId());
+        this.getCase(x, y).setTypeEntity(entity.getType());
+        this.getCase(x, y).setIdEntity(entity.getId());
 
         if(entity.getType() == 1)
-            this.player.add(entity);
-        else
+            this.player = entity;
+        else {
             this.mob.add(entity);
+            this.lastId++;
+        }
     }
 
     public void setCase(int x, int y, int ground, int build) {
-        int indice = y * this.w + x;
-
-        this.matrice[indice].setGround(ground);
-        this.matrice[indice].setBuild(build);        
+        this.getCase(x, y).setGround(ground);
+        this.getCase(x, y).setBuild(build);        
     }
 
     public Case[] getMatrice() {
