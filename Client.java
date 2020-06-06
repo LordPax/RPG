@@ -5,7 +5,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class Client extends JPanel{
+public class Client{
     private Map map;
     private TextWindow win;
 
@@ -22,7 +22,9 @@ public class Client extends JPanel{
     public void showWindow() {
         this.win.titre();
         this.win.showMap();
-        // this.autreTest();
+        // this.testProgressBarre();
+        // System.out.print("\n");
+        this.win.showPlayerInfo(40);
         this.win.choice();
     }
 
@@ -87,6 +89,13 @@ public class Client extends JPanel{
         // System.out.println(this.map.getMob(2));
         // System.out.println("\n--------------------------\n");
         // System.out.println(this.map.getMob(3));
+    }
+
+    public void testProgressBarre() {
+        this.win.progressBarre(7, 40, "test barre", "\033[41m", "\033[37m");
+        this.win.progressBarre(34, 40, "je suis une baree de test", "\033[42m", "\033[37m");
+        this.win.progressBarre(40, 40, "Test à la con", "\033[44m", "\033[37m");
+        this.win.progressBarre(0, 40, "Test à la con 2", "\033[44m", "\033[37m");
     }
 
     public void autreTest() {
