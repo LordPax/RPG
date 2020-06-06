@@ -68,8 +68,8 @@ public class TextWindow {
     public void showMap() {
         String aff = "";
 
-        for (int i = 0; i < this.map.getHeight(); i++) {
-            for (int j = 0; j < this.map.getWidth(); j++)
+        for (int i = 0; i < this.map.getHeight(); i++) { // parcoure chaques lignes
+            for (int j = 0; j < this.map.getWidth(); j++) // parcoure chaques colonnes
                 aff += showTexture(this.map.getCase(j, i));
             
             System.out.println(aff);
@@ -82,19 +82,19 @@ public class TextWindow {
 
         switch(c.getGround()) {
             case 0 :
-                ground = "\033[42m";
+                ground = "\033[42m"; // couleur du sol
                 break;
         }
 
         switch(c.getTypeEntity()) {
             case 1 :
-                entity = "\033[34m" + this.map.getPlayer().getSymbol() + " ";
+                entity = "\033[34m" + this.map.getPlayer().getSymbol() + " "; // couleur et symbole du joueur
                 break;
             case 2 :
-                entity = "\033[31m" + this.map.getMob(c.getIdEntity()).getSymbol() + " ";
+                entity = "\033[31m" + this.map.getMob(c.getIdEntity()).getSymbol() + " "; // couleur et symbole des mob
                 break;
             default :
-                entity = "  ";
+                entity = "  "; // case sans entité
                 break;
         }
 

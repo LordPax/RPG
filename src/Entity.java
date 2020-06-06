@@ -23,8 +23,8 @@ public class Entity{
     private Inventory inventory;
 
     public Entity() {
-        this.type = 0;
-        this.id = 0;
+        this.type = 0; // type de l'entité : 1 -> player, 2 -> mob
+        this.id = 0; // id de l'entité : pour retrouver l'entité dans l'ArrayList (le player n'a pas besoin d'id car il est le seule player)
         this.name = "";
         this.x = 0;
         this.y = 0;
@@ -52,7 +52,7 @@ public class Entity{
     }
 
     public Entity(String file, int id, int x, int y) {
-        JSONObject o = this.readJSON(file);
+        JSONObject o = this.readJSON(file); // lis le fichier json de l'entité
 
         this.type = o.getInt("type");
         this.id = id;
@@ -70,12 +70,12 @@ public class Entity{
         // this(o.getInt("type"), id, o.getString("name"), x, y, o.getInt("mana"), o.getInt("health"), o.getInt("maxMana"), o.getInt("maxHealth"), o.getInt("damage"));
     }
 
-    public void move(int x, int y) {
-        this.x += x;
-        this.y += y;
+    public void move(int dx, int dy) { // déplace l'entité au coord x + dx et y + dy
+        this.x += dx;
+        this.y += dy;
     }
 
-    public JSONObject readJSON(String file) {
+    public JSONObject readJSON(String file) { // lis le fichier json
         String path = "./Entity/" + file + ".json";
         String content = this.charge(path);
         

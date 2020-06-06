@@ -13,7 +13,7 @@ public class Map {
     private int w;
     private int h;
     private int lastId;
-    private int playerId;
+    // private int playerId;
     // private ArrayList<Entity> player;
     private Entity player;
     private ArrayList<Entity> mob;
@@ -29,7 +29,7 @@ public class Map {
         this.w = w;
         this.h = h;
         this.lastId = 0;
-        this.playerId = 0;
+        // this.playerId = 0;
         this.initMap();
     }
 

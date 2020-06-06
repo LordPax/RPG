@@ -13,7 +13,6 @@ public class Client extends JPanel{
         super();
         this.map = new Map(20, 20);
         this.win = new TextWindow(this.map);
-        this.addKeyListener(new ListenerKeyBoard());
     }
 
     public Client(String addr, int port) {}
