@@ -1,0 +1,10 @@
+{
+    "type" : 1,
+    "name" : "Player",
+    "health" : 100,
+    "mana" : 100,
+    "maxHealth" : 100,
+    "maxMana" : 100,
+    "damage" : 10,
+    "symbol" : "◉"
+}
