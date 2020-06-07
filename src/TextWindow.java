@@ -34,56 +34,23 @@ public class TextWindow {
                     ok = false;
                     break;
                 case "move" :
-                    try {
-                        String move = sc.nextLine();
-                        int aleax = (int) (Math.random()*(3-1+1))-1;
-                        int aleay = (int) (Math.random()*(3-1+1))-1;
-                        int aleaxDeux = (int) (Math.random()*(3-1+1))-1;
-                        int aleayDeux = (int) (Math.random()*(3-1+1))-1;
-                        int aleaxTrois = (int) (Math.random()*(3-1+1))-1;
-                        int aleayTrois = (int) (Math.random()*(3-1+1))-1;
-                        int aleaxQuatre = (int) (Math.random()*(3-1+1))-1;
-                        int aleayQuatre = (int) (Math.random()*(3-1+1))-1;
-                        //int x = this.map.getPlayer().getX(), y = this.map.getPlayer().getY();
-                        if (move.contains("q")) {
-                          this.map.moveEntity(1, 0, -1, 0);
-                          this.map.moveEntity(2, 3, aleax, aleay);
-                          this.map.moveEntity(2, 2, aleaxDeux, aleayDeux);
-                          this.map.moveEntity(2, 1, aleaxTrois, aleayTrois);
-                          this.map.moveEntity(2, 0, aleaxQuatre, aleayQuatre);
-                          System.out.println(aleax);
-                        }
-                        else if (move.contains("d")) {
-                          this.map.moveEntity(1, 0, 1, 0);
-                          this.map.moveEntity(2, 3, aleax, aleay);
-                          this.map.moveEntity(2, 2, aleaxDeux, aleayDeux);
-                          this.map.moveEntity(2, 1, aleaxTrois, aleayTrois);
-                          this.map.moveEntity(2, 0, aleaxQuatre, aleayQuatre);
-                        }
-                        else if (move.contains("z")) {
-                          this.map.moveEntity(1, 0, 0, -1);
-                          this.map.moveEntity(2, 3, aleax, aleay);
-                          this.map.moveEntity(2, 2, aleaxDeux, aleayDeux);
-                          this.map.moveEntity(2, 1, aleaxTrois, aleayTrois);
-                          this.map.moveEntity(2, 0, aleaxQuatre, aleayQuatre);
-                        }
-                        else if (move.contains("s")) {
-                          this.map.moveEntity(1, 0, 0, 1);
-                          this.map.moveEntity(2, 3, aleax, aleay);
-                          this.map.moveEntity(2, 2, aleaxDeux, aleayDeux);
-                          this.map.moveEntity(2, 1, aleaxTrois, aleayTrois);
-                          this.map.moveEntity(2, 0, aleaxQuatre, aleayQuatre);
-                        }
-                        else {
-                          System.out.println("Touche non enregistrée, recommencer svp!"); }
+                    String move = sc.nextLine();
 
-                        //this.map.moveEntity(1, 0, x, y);
-                        this.showMap();
-                        this.showPlayerInfo(40);
-                    } catch(InputMismatchException e) {
-                        System.out.println(TextWindow.TITLE + e);
-                    }
+                    if (move.contains("q"))
+                      this.map.moveEntity(1, 0, -1, 0);
+                    else if (move.contains("d"))
+                      this.map.moveEntity(1, 0, 1, 0);
+                    else if (move.contains("z"))
+                      this.map.moveEntity(1, 0, 0, -1);
+                    else if (move.contains("s"))
+                      this.map.moveEntity(1, 0, 0, 1);
+                    else
+                      System.out.println("Touche non enregistrée, recommencer svp!");
 
+                    this.map.moveMobAlea();
+                    this.showMap();
+                    this.showPlayerInfo(40);
+                    
                     break;
                 default :
                     System.out.println(TextWindow.TITLE + "Votre requete n'a pas été comprise");
