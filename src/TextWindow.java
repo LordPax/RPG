@@ -1,6 +1,7 @@
 package src;
 
 import java.util.*;
+import java.lang.Math;
 
 public class TextWindow {
     private Map map;
@@ -33,13 +34,54 @@ public class TextWindow {
                     break;
                 case "move" :
                     try {
-                        int x = sc.nextInt(), y = sc.nextInt();
-                        this.map.moveEntity(1, 0, x, y);
+                        String move = sc.nextLine();
+                        int aleax = (int) (Math.random()*(3-1+1))-1;
+                        int aleay = (int) (Math.random()*(3-1+1))-1;
+                        int aleaxDeux = (int) (Math.random()*(3-1+1))-1;
+                        int aleayDeux = (int) (Math.random()*(3-1+1))-1;
+                        int aleaxTrois = (int) (Math.random()*(3-1+1))-1;
+                        int aleayTrois = (int) (Math.random()*(3-1+1))-1;
+                        int aleaxQuatre = (int) (Math.random()*(3-1+1))-1;
+                        int aleayQuatre = (int) (Math.random()*(3-1+1))-1;
+                        //int x = this.map.getPlayer().getX(), y = this.map.getPlayer().getY();
+                        if (move.contains("q")) {
+                          this.map.moveEntity(1, 0, -1, 0);
+                          this.map.moveEntity(2, 3, aleax, aleay);
+                          this.map.moveEntity(2, 2, aleaxDeux, aleayDeux);
+                          this.map.moveEntity(2, 1, aleaxTrois, aleayTrois);
+                          this.map.moveEntity(2, 0, aleaxQuatre, aleayQuatre);
+                          System.out.println(aleax);
+                        }
+                        else if (move.contains("d")) {
+                          this.map.moveEntity(1, 0, 1, 0);
+                          this.map.moveEntity(2, 3, aleax, aleay);
+                          this.map.moveEntity(2, 2, aleaxDeux, aleayDeux);
+                          this.map.moveEntity(2, 1, aleaxTrois, aleayTrois);
+                          this.map.moveEntity(2, 0, aleaxQuatre, aleayQuatre);
+                        }
+                        else if (move.contains("z")) {
+                          this.map.moveEntity(1, 0, 0, -1);
+                          this.map.moveEntity(2, 3, aleax, aleay);
+                          this.map.moveEntity(2, 2, aleaxDeux, aleayDeux);
+                          this.map.moveEntity(2, 1, aleaxTrois, aleayTrois);
+                          this.map.moveEntity(2, 0, aleaxQuatre, aleayQuatre);
+                        }
+                        else if (move.contains("s")) {
+                          this.map.moveEntity(1, 0, 0, 1);
+                          this.map.moveEntity(2, 3, aleax, aleay);
+                          this.map.moveEntity(2, 2, aleaxDeux, aleayDeux);
+                          this.map.moveEntity(2, 1, aleaxTrois, aleayTrois);
+                          this.map.moveEntity(2, 0, aleaxQuatre, aleayQuatre);
+                        }
+                        else {
+                          System.out.println("Touche non enregistrée, recommencer svp!"); }
+
+                        //this.map.moveEntity(1, 0, x, y);
                         this.showMap();
                     } catch(InputMismatchException e) {
                         System.out.println("RPG error : " + e);
                     }
-                    
+
                     break;
                 default :
                     System.out.println("RPG : Votre requete n'a pas été comprise");
@@ -52,7 +94,7 @@ public class TextWindow {
         System.out.println("\n=============== Help ================");
         System.out.println("help ................. Affiche l'aide");
         System.out.println("quit ................... Ferme le jeu");
-        System.out.println("move <x> <y> ...... Déplace le joueur");
+        System.out.println("move <q>(gauche)/<d>(droite)/<z>(haut)/<s>(bas) ...... Déplace le joueur");
         System.out.println("=====================================\n");
     }
 
@@ -71,7 +113,7 @@ public class TextWindow {
         for (int i = 0; i < this.map.getHeight(); i++) { // parcoure chaques lignes
             for (int j = 0; j < this.map.getWidth(); j++) // parcoure chaques colonnes
                 aff += showTexture(this.map.getCase(j, i));
-            
+
             System.out.println(aff);
             aff = "";
         }
