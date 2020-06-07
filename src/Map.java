@@ -68,13 +68,20 @@ public class Map {
             System.out.println("RPG : Pas d'entité correspondant au type, id");
 
         int x = entity.getX(), y = entity.getY();
-        entity.move(dx, dy);
 
-        this.getCase(x, y).setTypeEntity(0);
-        this.getCase(x, y).setIdEntity(0);
+        // System.out.println((x + dx) + " " + (y + dy));
+        // System.out.println(dx + " " + dy);
+        // System.out.println(x + " " + y);
 
-        this.getCase(x + dx, y + dy).setTypeEntity(entity.getType());
-        this.getCase(x + dx, y + dy).setIdEntity(entity.getId());
+        if ((x + dx) >= 0 && (x + dx) <= this.w && (y + dy) >= 0 && (y + dy) <= this.h) { // on verifie que les coordonnées soit valide
+            entity.move(dx, dy);
+
+            this.getCase(x, y).setTypeEntity(0);
+            this.getCase(x, y).setIdEntity(0);
+
+            this.getCase(x + dx, y + dy).setTypeEntity(entity.getType());
+            this.getCase(x + dx, y + dy).setIdEntity(entity.getId());
+        }
 
     }
 
@@ -84,6 +91,14 @@ public class Map {
 
         for (int i = 0; i < size; i++)
             this.matrice[i] = new Case();
+    }
+
+    public void moveMobAlea() {
+        for (int i = 0; i < this.mob.size(); i++) {
+            int aleax = (int) (Math.random()*(3-1+1))-1;
+            int aleay = (int) (Math.random()*(3-1+1))-1;
+            this.moveEntity(2, i, aleax, aleay);
+        }
     }
 
     public Case getCase(int x, int y) {
